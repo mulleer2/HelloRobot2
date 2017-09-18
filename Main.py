@@ -1,18 +1,19 @@
- import gopigo
- import time
+from gopigo import *
 
- class Piggy(object):
+import time
 
-     def __init__(self):
-         print("I am alive")
+class Piggy(object):
 
-     def cha_cha(self):
-         for x in range(5):
+    def __init__(self):
+        print("I am alive")
+
+    def cha_cha(self):
+        for x in range(5):
             right_rot()
             time.sleep(.5)
             left_rot()
             time.sleep(.5)
-            stop(
+            stop()
 
 
 p = Piggy()
