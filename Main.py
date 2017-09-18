@@ -15,8 +15,17 @@ class Piggy(object):
             time.sleep(.5)
             stop()
 
+    def dab(self):
+        for x in range(5):
+            fwd()
+            time.sleep(.5)
+            bwd()
+            time.sleep(.5)
+            right_rot()
+            time.sleep(.5)
+            stop()
 
 p = Piggy()
-p.cha_cha()
+p.dab()
 
 
