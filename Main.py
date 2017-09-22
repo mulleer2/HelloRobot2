@@ -66,12 +66,6 @@ p = Piggy()
 
 
 
-try:
-    menu()
-except Exception as ee:
-    print(ee)
-    from gopigo import *
-    stop()
 
 
 
