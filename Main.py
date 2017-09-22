@@ -71,6 +71,8 @@ def menu():
             p.pulse()
         elif "3" in input:
             p.servo_sweep()
+        else:
+            print("Sorry Im not that talented.")
 
 
 
@@ -81,6 +83,6 @@ except Exception as ee:
     print(ee)
     from gopigo import *
     stop()
-    
+
 
 
