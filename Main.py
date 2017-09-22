@@ -66,7 +66,7 @@ class Piggy(object):
         fwd()
         time.sleep(.2)
         right()
-        time.sleep(.2)
+        time.sleep(.4)
         fwd()
         while(True):
             if us_dist(15) < 30:
