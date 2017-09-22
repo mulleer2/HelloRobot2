@@ -53,17 +53,34 @@ class Piggy(object):
 
     def servo_sweep(self):
         """loops in a 120 degree arc and moves servo"""
-        for ang in range(20, 160, 2):
+        for ang in range(30, 160, 2):
             servo(ang)
             time.sleep(.2)
 
 
 
 
-
-
 p = Piggy()
 
+def menu():
+    while True:
+        input = raw_input("Press 1 for cruise \n Press 2 for pulse \n Press 3 for sweep")
+        if "1" in input:
+            p.cruise()
+        elif "2" in input:
+            p.pulse()
+        elif "3" in input:
+            p.servo_sweep()
 
+
+
+
+try:
+    menu()
+except Exception as ee:
+    print(ee)
+    from gopigo import *
+    stop()
+    
 
 
