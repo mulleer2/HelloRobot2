@@ -63,17 +63,24 @@ class Piggy(object):
 p = Piggy()
 
 
-message = input("What would you like to do? pulse or cruise or sweep").lower()
+def menu():
+    while True:
+        input = raw_input("Press 1 for cruise \n Press 2 for pulse \n Press 3 for sweep")
+        if "1" in input:
+            p.cruise()
+        elif "2" in input:
+            p.pulse()
+        elif "3" in input:
+            p.servo_sweep()
+        else:
+            print("Sorry Im not that talented.")
 
-if message == "pulse":
-    p.pulse()
-elif message == "cruise":
-    p.cruise()
-elif message == "sweep":
-    p.servo_sweep()
-else:
-    print("Sorry, I can't do that")
 
+try:
+    menu()
+except(KeyboardInterrupt, SystemExit):
+    from gopigo import *
+    stop()
 
 
 
