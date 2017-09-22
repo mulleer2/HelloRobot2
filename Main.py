@@ -63,6 +63,18 @@ class Piggy(object):
 p = Piggy()
 
 
+message = input("What would you like to do? pulse or cruise or sweep").lower()
+
+if message == "pulse":
+    p.pulse()
+elif message == "cruise":
+    p.cruise()
+elif message == "sweep":
+    p.servo_sweep()
+else:
+    print("Sorry, I can't do that")
+
+
 
 
 
