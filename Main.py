@@ -57,6 +57,21 @@ class Piggy(object):
             servo(ang)
             time.sleep(.2)
 
+    def zig_zag(self):
+        """drives forward turns, then goes forward then turns back"""
+        enc_tgt(1,1,36)
+        fwd()
+        enc_tgt(1,0,36)
+        right()
+        enc_tgt(0,1,36)
+        while(True):
+            if us_dist(15) < 30:
+                stop()
+            time.sleep(.2)
+
+
+
+
 
 
 
@@ -65,13 +80,15 @@ p = Piggy()
 
 def menu():
     while True:
-        input = raw_input("Press 1 for cruise \n Press 2 for pulse \n Press 3 for sweep")
+        input = raw_input("Press 1 for cruise \n Press 2 for pulse \n Press 3 for sweep \n Press 4 for Zig Zag")
         if "1" in input:
             p.cruise()
         elif "2" in input:
             p.pulse()
         elif "3" in input:
             p.servo_sweep()
+        elif "4" in input:
+            p.zig_zag()
         else:
             print("Sorry Im not that talented.")
 
