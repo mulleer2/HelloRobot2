@@ -59,15 +59,15 @@ class Piggy(object):
 
     def zig_zag(self):
         """drives forward turns, then goes forward then turns back"""
-        enc_tgt(1,1,36)
-        fwd()
-        enc_tgt(1,0,36)
-        right()
-        enc_tgt(0,1,36)
-        while(True):
-            if us_dist(15) < 30:
-                stop()
-            time.sleep(.2)
+        fwd():
+            enc_tgt(1,0,36)
+            right()
+            enc_tgt(0,1,36)
+            left()
+            while(True):
+                if us_dist(15) < 30:
+                    stop()
+                time.sleep(.2)
 
 
 
